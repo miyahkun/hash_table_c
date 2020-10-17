@@ -1,0 +1,82 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "C/C++: gcc build",
+      "command": "/usr/bin/gcc",
+      "args": [
+        "-g",
+        "${workspaceFolder}/src/main.c",
+        "${workspaceFolder}/src/hash_table.c",
+        "${workspaceFolder}/src/utils/prime.c",
+        "${workspaceFolder}/src/utils/random_string.c",
+        "${workspaceFolder}/src/utils/xmalloc.c",
+        "${workspaceFolder}/src/benchmark/test.c",
+        "-lm",
+        "-O0",
+        "-o",
+        "${workspaceFolder}/build/main"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "C/C++: gcc build",
+      "command": "/usr/bin/gcc",
+      "args": [
+        "-g",
+        "${workspaceFolder}/src/main.c",
+        "${workspaceFolder}/src/hash_table.c",
+        "${workspaceFolder}/src/utils/prime.c",
+        "${workspaceFolder}/src/utils/random_string.c",
+        "${workspaceFolder}/src/utils/xmalloc.c",
+        "${workspaceFolder}/src/benchmark/test.c",
+        "-lm",
+        "-O0",
+        "-o",
+        "${workspaceFolder}/build/main",
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "C/C++: gcc execute benchmark",
+      "command": "${workspaceFolder}/build/main -t",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": "none"
+    },
+  ],
+  "version": "2.0.0"
+}
